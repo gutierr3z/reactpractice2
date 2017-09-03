@@ -7,10 +7,9 @@ import ReactDOM from 'react-dom';
 //     );
 // });
 
-
 // Create a new component and produce some html
 
-const APP = function() {
+const APP = () => {
 
     return <div>Hi!</div>;
 };
