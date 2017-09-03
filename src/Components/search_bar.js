@@ -18,21 +18,30 @@ class SearchBar extends Component {
         // return <input onChange = { ( e ) => console.log( e.target.value ) } />;
         // return <input onChange = { e => console.log( e.target.value ) } />;
         return (
-            <div>
+            <div className="search-bar">
                 {/* <input onChange = { e => this.setState( { term: e.target.value } ) } /> */}
-                <input onChange = { e => this.setState( { term: e.target.value } ) } />
+                {/* <input onChange = { e => this.setState( { term: e.target.value } ) } /> */}
+
+                <input 
+                    value = { this.state.term }
+                    onChange = { e => this.onInputChange( e.target.value ) } />
                 <br />
-                <input value = { this.state.term } /> { /* controlled component, value set by state */ }
+                {/* <input value = { this.state.term } /> { /* controlled component, value set by state */ }
                 <br />
-                Value of input: { this.state.term }
+                {/* Value of input: { this.state.term } */}
             </div>
         );
     };
 
-    onInputChange( e ) {
-
-        console.log( e.target.value );
+    onInputChange( term ) {
+        this.setState( { term } );
+        this.props.onSearchTermChange( term );
     };
+
+    // onInputChange( e ) {
+
+    //     console.log( e.target.value );
+    // };
 };
 
 // functional component
