@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 // import ReactDOM from 'react-dom';
  
 // document.addEventListener('DOMContentLoaded', function() {
@@ -16,3 +16,4 @@ const APP = function() {
 };
 
 // take this component's html and put it on the page, in the DOM.
+React.render( APP );
