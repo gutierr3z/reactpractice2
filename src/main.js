@@ -43,7 +43,8 @@ class APP extends Component {
     constructor( props ) {
         super( props );
         this.state = {
-            videos: []
+            videos: [],
+            selectedVideo: null
         };
 
         YTSearch({
@@ -52,7 +53,8 @@ class APP extends Component {
         },
         ( videos ) => {
             this.setState({
-                videos: videos //videos: videos, when key value are the same
+                videos: videos, //videos: videos, when key value are the same
+                selectedVideo: videos[0]
             });
         });
     };
@@ -61,8 +63,11 @@ class APP extends Component {
         return (
             <div>
                 <SearchBar />
-                <VideoDetail video = { this.state.videos[0] } />
-                <VideoList videos = { this.state.videos } />
+                {/* <VideoDetail video = { this.state.videos[0] } /> */}
+                <VideoDetail video = { this.state.selectedVideo } />
+                <VideoList 
+                    onVideoSelect = { selectedVideo => this.setState( { selectedVideo } ) }
+                    videos = { this.state.videos } />
             </div>
         );
     };
