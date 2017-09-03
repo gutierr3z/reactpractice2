@@ -1,6 +1,7 @@
 // Node Modules
 import React from 'react';
 import ReactDOM from 'react-dom';
+import YTSearch from 'youtube-api-search';
 
 // Application Components
 import SearchBar from './Components/search_bar'
@@ -9,6 +10,15 @@ import SearchBar from './Components/search_bar'
 const API_KEY = 'AIzaSyBzGahfgQoWXYa9uenNg2ZBVRT6PPH46b0';
 // package : npm install --save youtube-api-search
 // ---------------
+YTSearch({
+    key: API_KEY,
+    term: 'surfboards'
+},
+function( data ) {
+    console.log( data );
+});
+
+// downwards data flow
  
 // document.addEventListener('DOMContentLoaded', function() {
 //     ReactDOM.render(
