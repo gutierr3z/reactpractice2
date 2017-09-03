@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 
 // Application Components
-import SearchBar from './Components/search_bar'
+import SearchBar from './Components/search_bar';
+import VideoList from './Components/video_list';
 
 // ---------------
 const API_KEY = 'AIzaSyBzGahfgQoWXYa9uenNg2ZBVRT6PPH46b0';
@@ -49,8 +50,8 @@ class APP extends Component {
             term: 'surfboards'
         },
         ( videos ) => {
-            this.setSate({
-                videos //videos: videos, when key value are the same
+            this.setState({
+                videos: videos //videos: videos, when key value are the same
             });
         });
     };
@@ -59,6 +60,7 @@ class APP extends Component {
         return (
             <div>
                 <SearchBar />
+                <VideoList videos = { this.state.videos } />
             </div>
         );
     };
