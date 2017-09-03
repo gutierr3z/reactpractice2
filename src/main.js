@@ -19,7 +19,11 @@ const API_KEY = 'AIzaSyBzGahfgQoWXYa9uenNg2ZBVRT6PPH46b0';
 // Create a new component and produce some html
 const APP = () => {
 
-    return <div>Hi!</div>;
+    return (
+        <div>
+            <SearchBar />
+        </div>
+    );
 };
 
 // take this component's html and put it on the page, in the DOM.
