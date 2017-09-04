@@ -2,7 +2,7 @@
   "name": "reactpractice2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "compile": "webpack",
     "start": "node server.js",

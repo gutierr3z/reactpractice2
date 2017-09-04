@@ -5,10 +5,12 @@ module.exports = {
   entry: [
     './main.js'
   ],
+  
   output: {
     path: path.join( __dirname, 'www' ),
     filename: 'bundle.js'
   },
+
   module: {
     rules: [
       {
@@ -20,6 +22,7 @@ module.exports = {
       }
     ]
   },
+
   resolve: {
     modules: [
       path.join( __dirname, 'node_modules' )
