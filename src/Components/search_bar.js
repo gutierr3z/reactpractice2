@@ -39,14 +39,12 @@ class SearchBar extends Component {
     };
 
     // onInputChange( e ) {
-
     //     console.log( e.target.value );
     // };
 };
 
 // functional component
 // const SearchBar = () => {
-
 //     return <input />; // React.createElement
 // };
 
